@@ -42,6 +42,8 @@ impl ThreadPool {
         }
     }
 
+    /// 执行job任务
+    ///
     pub fn execute<F>(&self, f: F)
         where
             F: FnOnce() + Send + 'static
